@@ -1,3 +1,31 @@
+<%- include('partials/header.ejs') %>
 <main>
-    
+
+    <% books.forEach(book=> { %>
+
+        <div>
+            <img src="https://covers.openlibrary.org/b/id/<%= book.cover_id %>-M.jpg" alt="cover">
+            
+            <h2>
+                <%= book.title %>
+            </h2>
+
+            <p>
+                Author: <%= book.author %>
+            </p>
+
+            <p>
+                Rating: <b><%= book.rating %></b>/10
+            </p>
+
+            <p>
+                <%= book.review %>
+            </p>
+
+            <hr>
+
+        </div>
+
+    <% }) %>
 </main>
+<%- include('partials/footer.ejs') %>

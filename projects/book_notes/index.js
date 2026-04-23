@@ -13,8 +13,16 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // home
-app.get("/", (req, res) => {
-    res.send("Server is running");
+app.get("/", async (req, res) => {
+    try {
+        const result = await db.query("SELECT * FROM books ORDER BY date_read DESC;");
+
+        res.render("index.ejs", { books: result.rows });
+
+    } catch (err) {
+        console.log(err);
+        res.send("Database error");
+    }
 });
 
 // test db
