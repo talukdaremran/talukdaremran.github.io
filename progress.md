@@ -118,3 +118,36 @@ Each week I add:
   - Finished: Introduction To Web Hacking module- Subdomain Enumeration, Athenticatiion Bypass, IDOR, and File Inclusion room
   - Next: Introduction To Web Hacking module (SSRF, XSS, SQL injection)
 - **Time spent:** ~28 hours
+
+---
+
+### Week: 2026-01-19 → 2026-03-01 (6 weeks)
+- **Angela Yu's Web dev**
+  - Finished: 
+    Section 30- Build You Own API (Completed)  
+    Section 31- Databases (Completed)  
+    Section 32- SQL (Completed)  
+    Section 33- PostgreSQL (In-progress)  
+  - Next: Section 33- PostgreSQL   
+
+- **Time spent:** ~47 hours
+
+---
+
+### Week: 2026-03-02 → 2026-03-29 (4 weeks)
+- **Angela Yu's Web dev**  
+  - Finished:    
+    Section 33- PostgreSQL (In-progress)  
+  - Next: Section 33- PostgreSQL   
+
+- **Time spent:** ~9 hours
+
+---
+
+### Week: 2026-03-30 → 2026-04-19 (3 weeks)
+- **Angela Yu's Web dev**  
+  - Finished:    
+    Section 33- PostgreSQL (Completed)  
+  - Next: Section 34- Capstone Project- Book Notes   
+
+- **Time spent:** ~7 hours
