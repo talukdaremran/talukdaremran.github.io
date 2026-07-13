@@ -151,3 +151,7 @@ Each week I add:
   - Next: Section 34- Capstone Project- Book Notes   
 
 - **Time spent:** ~7 hours
+
+### Date: 7 July 2026
+- Finished **Full-stack Web Development** Bootcamp by Angela Yu
+- Started working on **Capstone Project** (Final project of my undergraduate degree)
