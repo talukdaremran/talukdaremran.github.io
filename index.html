@@ -1,58 +1,129 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Emran Talukdar — Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <style>
     body {
-        font-family: system-ui, -apple-system, Roboto, "Segoe UI", Arial; 
-        padding: 28px; 
-        max-width:900px; 
-        margin:auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      padding: 28px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #222;
     }
+
     header {
-        margin-bottom:18px;
+      margin-bottom: 24px;
     }
-    h1{
-        margin:0;
+
+    h1 {
+      margin-bottom: 6px;
     }
-    
-    .card{
-        border:1px solid #eee;
-        padding:12px;
-        border-radius:8px;
-        margin-bottom:12px;
+
+    h2 {
+      margin-top: 0;
     }
-    a{
-        color:#0366d6;
+
+    .card {
+      border: 1px solid #e5e5e5;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .project-title {
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: #555;
+      font-size: 0.95rem;
     }
   </style>
 </head>
+
 <body>
-  <header><h1>Emran Talukdar</h1><p>Full-stack developer student • web security learner • Sydney</p></header>
+  <header>
+    <h1>Emran Talukdar</h1>
+    <p>
+      Bachelor of Information Technology student in Sydney, focusing on full-stack web development,
+      backend development, and web security fundamentals.
+    </p>
+  </header>
 
   <section class="card">
     <h2>Projects</h2>
+
+    <p>
+      <span class="project-title">Country Explorer</span><br>
+      A full-stack web application for exploring countries using the REST Countries API.
+      Built with Node.js, Express.js, EJS, JavaScript, CSS, and API caching.
+      <br>
+      <a href="https://github.com/talukdaremran/Country-Explorer">GitHub Repository</a>
+    </p>
+
+    <p>
+      <span class="project-title">Book Notes App</span><br>
+      A book tracking and review application with PostgreSQL, CRUD functionality, sorting,
+      ratings, notes, and individual book pages.
+      <br>
+      <a href="https://github.com/talukdaremran/book-notes">GitHub Repository</a>
+    </p>
+
+    <p>
+      <span class="project-title">Blog Web App</span><br>
+      A simple blog application built with Node.js, Express.js, and EJS, featuring create,
+      edit, and delete functionality.
+      <br>
+      <a href="https://github.com/talukdaremran/blog-web-app">GitHub Repository</a>
+    </p>
+
+    <p>
+      <span class="project-title">CTF Writeups</span><br>
+      Cybersecurity learning notes and writeups, including OverTheWire Bandit practice.
+      <br>
+      <a href="https://github.com/talukdaremran/ctf-writeups">GitHub Repository</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Current Focus</h2>
     <ul>
-      <li><strong>Drum Kit</strong> — small drum kit Web app. <a href="projects/drum_kit/">Code & details</a></li>
-      <li><strong>Capstone</strong> — Full-stack CRUD app (Node/Express/Mongo + React). Deploying soon.</li>
+      <li>Full-stack web development with Node.js, Express.js, PostgreSQL, EJS, and React</li>
+      <li>Building stronger project documentation and GitHub workflow</li>
+      <li>Working on a secure SME ERP capstone project</li>
+      <li>Learning web security fundamentals as a side interest</li>
     </ul>
   </section>
 
   <section class="card">
-    <h2>Writeups</h2>
-    <ul>
-      <li><a href="writeups/bandit/level-0.md">bandit level 0 — OverTheWire wargame</a></li>
-    </ul>
+    <h2>Learning Log</h2>
+    <p>
+      I keep a progress log of my web development and cybersecurity learning.
+    </p>
+    <p>
+      <a href="progress.md">View progress log</a>
+    </p>
   </section>
 
-  <section class="card">
-    <h2>Progress</h2>
-    <p>Latest: Angela Yu — Section 19 (jQuery). THM — Command Line. LiveOverflow — bin 0x0C.</p>
-    <p><a href="progress.md">Full progress log</a></p>
-  </section>
-
-  <footer style="margin-top:20px;color:#555">Contact • <a href="https://github.com/talukderemran61/">GitHub</a> • <a href="mailto:emrant31@gmail.com">Mail</a></footer>
+  <footer>
+    Contact:
+    <a href="https://github.com/talukdaremran">GitHub</a> •
+    <a href="https://www.linkedin.com/in/emran-talukdar/">LinkedIn</a> •
+    <a href="mailto:emrant31@gmail.com">Email</a>
+  </footer>
 </body>
 </html>
