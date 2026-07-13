@@ -2,7 +2,7 @@
 
 This repository contains my personal portfolio website.
 
-Live site: [https://talukdaremran.github.io/portfolio/](https://talukdaremran.github.io/portfolio/)
+Live site: [https://talukdaremran.github.io](https://talukdaremran.github.io)
 
 ## About
 
