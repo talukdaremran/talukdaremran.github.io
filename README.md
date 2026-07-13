@@ -1,25 +1,30 @@
-# Emran Talukdar - Portfolio
+# Emran Talukdar — Portfolio Website
 
-Full-stack student building web apps and learning web security.
+This repository contains my personal portfolio website.
 
-## Projects
-- **Blog Web application** - Full-stack CRUD app (Node, Express, EJS) [`projects/Simple Blog web app/`](/projects/Simple%20Blog%20web%20app/).
-- **The Simon Game** - Short-term memory skill game (HTML, CSS, JS, jQuery). [`projects/simon_game`](/projects/simon_game/)
-- **Drum kit** - Small drum kit web app (HTML, CSS, JS). [`projects/drum_kit/`](/projects/drum_kit/)
-- **Unix Program**- Unix program written in bash to accomplish simple tasks (bash). [`projects/unix_program`](/projects/unix_program/)
+Live site: [https://talukdaremran.github.io/portfolio/](https://talukdaremran.github.io/portfolio/)
 
-## Writeups
-- [`writeups/bandit/`](/writeups/bandit/) - OverTheWire Bandit Wargame.  
+## About
 
-## Progress
-See weekly log: [`progress.md`](progress.md).
+I am a Bachelor of Information Technology student at Victoria University Sydney, majoring in Web and Mobile Application Development.
+
+My current focus is full-stack web development using Node.js, Express.js, PostgreSQL, EJS, React, JavaScript, REST APIs, and Git/GitHub. I also keep web security as a side interest through CTFs and web security practice.
+
+## Featured Projects
+
+- [Country Explorer](https://github.com/talukdaremran/Country-Explorer)
+- [Book Notes App](https://github.com/talukdaremran/book-notes)
+- [Blog Web App](https://github.com/talukdaremran/blog-web-app)
+- [CTF Writeups](https://github.com/talukdaremran/ctf-writeups)
+
+## Learning Log
+
+I also keep a progress log here:
+
+- [progress.md](progress.md)
 
 ## Contact
-- GitHub: https://github.com/talukderemran61/
-- LinkedIn: https://www.linkedin.com/in/emran-talukdar/  
+
+- GitHub: [talukdaremran](https://github.com/talukdaremran)
+- LinkedIn: [Emran Talukdar](https://www.linkedin.com/in/emran-talukdar/)
 - Email: emrant31@gmail.com
-
----
-
-*(Quick links)*  
-- Live site: [`https://talukderemran61.github.io/portfolio/`](https://talukderemran61.github.io/portfolio/)
