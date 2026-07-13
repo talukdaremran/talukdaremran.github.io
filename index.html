@@ -3,127 +3,551 @@
 <head>
   <meta charset="utf-8">
   <title>Emran Talukdar — Portfolio</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --tag-bg: #eef2ff;
+      --tag-text: #3730a3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      padding: 28px;
-      max-width: 900px;
-      margin: auto;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      color: #222;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
     }
 
     header {
-      margin-bottom: 24px;
+      padding: 28px 0;
     }
 
-    h1 {
-      margin-bottom: 6px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
     }
 
-    h2 {
-      margin-top: 0;
-    }
-
-    .card {
-      border: 1px solid #e5e5e5;
-      padding: 16px;
-      border-radius: 10px;
-      margin-bottom: 16px;
-    }
-
-    a {
-      color: #0366d6;
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .project-title {
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 64px 0 48px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 24px;
+      max-width: 650px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #ffffff, #eef2ff);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .hero-card p {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .button.secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
       font-weight: 700;
     }
 
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .skill i {
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .skills-marquee {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding: 8px 0;
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+      );
+    }
+
+    .skills-track {
+      display: flex;
+      width: max-content;
+      animation: scrollSkills 28s linear infinite;
+    }
+
+    .skills-marquee:hover .skills-track {
+      animation-play-state: paused;
+    }
+
+    .skills-slide {
+      display: flex;
+      gap: 10px;
+      padding-right: 10px;
+    }
+
+    @keyframes scrollSkills {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skills-track {
+        animation: none;
+        flex-wrap: wrap;
+      }
+
+      .skills-slide {
+        flex-wrap: wrap;
+      }
+    }
+
+    .focus-list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .focus-list li {
+      margin-bottom: 8px;
+    }
+
     footer {
-      margin-top: 28px;
-      color: #555;
+      padding: 34px 0 44px;
+      color: var(--muted);
+      text-align: center;
       font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 42px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Emran Talukdar</h1>
-    <p>
-      Bachelor of Information Technology student in Sydney, focusing on full-stack web development,
-      backend development, and web security fundamentals.
-    </p>
+    <div class="container">
+      <nav>
+        <a class="logo" href="/">Emran Talukdar</a>
+
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#focus">Focus</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <section class="card">
-    <h2>Projects</h2>
+  <main>
+    <section class="hero">
+      <div class="container hero" style="padding: 0;">
+        <div>
+          <h1>Full-stack developer student building practical web apps.</h1>
 
-    <p>
-      <span class="project-title">Country Explorer</span><br>
-      A full-stack web application for exploring countries using the REST Countries API.
-      Built with Node.js, Express.js, EJS, JavaScript, CSS, and API caching.
-      <br>
-      <a href="https://github.com/talukdaremran/Country-Explorer">GitHub Repository</a>
-    </p>
+          <p>
+            I am a Bachelor of Information Technology student in Sydney, majoring in Web and Mobile Application Development.
+            I focus on building full-stack applications with JavaScript, Node.js, Express.js, PostgreSQL, EJS, React, and REST APIs.
+          </p>
 
-    <p>
-      <span class="project-title">Book Notes App</span><br>
-      A book tracking and review application with PostgreSQL, CRUD functionality, sorting,
-      ratings, notes, and individual book pages.
-      <br>
-      <a href="https://github.com/talukdaremran/book-notes">GitHub Repository</a>
-    </p>
+          <div class="buttons">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="https://github.com/talukdaremran">GitHub</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/emran-talukdar/">LinkedIn</a>
+          </div>
+        </div>
 
-    <p>
-      <span class="project-title">Blog Web App</span><br>
-      A simple blog application built with Node.js, Express.js, and EJS, featuring create,
-      edit, and delete functionality.
-      <br>
-      <a href="https://github.com/talukdaremran/blog-web-app">GitHub Repository</a>
-    </p>
+        <aside class="hero-card">
+          <h2>Currently focused on</h2>
+          <p>
+            Strengthening full-stack development, improving React skills, building clean backend projects,
+            and working on a secure SME ERP capstone project.
+          </p>
+        </aside>
+      </div>
+    </section>
 
-    <p>
-      <span class="project-title">CTF Writeups</span><br>
-      Cybersecurity learning notes and writeups, including OverTheWire Bandit practice.
-      <br>
-      <a href="https://github.com/talukdaremran/ctf-writeups">GitHub Repository</a>
-    </p>
-  </section>
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Featured Projects</h2>
+          <p>Selected projects from my web development and security learning journey.</p>
+        </div>
 
-  <section class="card">
-    <h2>Current Focus</h2>
-    <ul>
-      <li>Full-stack web development with Node.js, Express.js, PostgreSQL, EJS, and React</li>
-      <li>Building stronger project documentation and GitHub workflow</li>
-      <li>Working on a secure SME ERP capstone project</li>
-      <li>Learning web security fundamentals as a side interest</li>
-    </ul>
-  </section>
+        <div class="grid">
+          <article class="card">
+            <h3>Country Explorer</h3>
+            <p>
+              A full-stack web application for exploring countries using the REST Countries API,
+              with search, filtering, country detail pages, and server-side caching.
+            </p>
+            <a href="https://github.com/talukdaremran/Country-Explorer">View repository →</a>
 
-  <section class="card">
-    <h2>Learning Log</h2>
-    <p>
-      I keep a progress log of my web development and cybersecurity learning.
-    </p>
-    <p>
-      <a href="progress.md">View progress log</a>
-    </p>
-  </section>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">EJS</span>
+              <span class="tag">REST API</span>
+            </div>
+          </article>
 
-  <footer>
-    Contact:
-    <a href="https://github.com/talukdaremran">GitHub</a> •
-    <a href="https://www.linkedin.com/in/emran-talukdar/">LinkedIn</a> •
-    <a href="mailto:emrant31@gmail.com">Email</a>
+          <article class="card">
+            <h3>Book Notes App</h3>
+            <p>
+              A book tracking and review application where users can store books, ratings,
+              notes, reading dates, and view individual book pages.
+            </p>
+            <a href="https://github.com/talukdaremran/book-notes">View repository →</a>
+
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">EJS</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Blog Web App</h3>
+            <p>
+              A simple blog application built with Node.js, Express.js, and EJS,
+              featuring create, edit, delete, and dynamic page rendering.
+            </p>
+            <a href="https://github.com/talukdaremran/blog-web-app">View repository →</a>
+
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">EJS</span>
+              <span class="tag">CRUD</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>CTF Writeups</h3>
+            <p>
+              Cybersecurity learning notes and writeups, including OverTheWire Bandit practice
+              and web security learning documentation.
+            </p>
+            <a href="https://github.com/talukdaremran/ctf-writeups">View repository →</a>
+
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">CTF</span>
+              <span class="tag">Writeups</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p>Technologies and tools I am currently building with.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skills-marquee">
+            <div class="skills-track">
+              <div class="skills-slide">
+                <span class="skill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                <span class="skill"><i class="devicon-react-original"></i> React</span>
+                <span class="skill"><i class="devicon-nodejs-plain"></i> Node.js</span>
+                <span class="skill"><i class="devicon-express-original"></i> Express.js</span>
+                <span class="skill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                <span class="skill">EJS</span>
+                <span class="skill"><i class="devicon-html5-plain"></i> HTML</span>
+                <span class="skill"><i class="devicon-css3-plain"></i> CSS</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill"><i class="devicon-git-plain"></i> Git</span>
+                <span class="skill"><i class="devicon-github-original"></i> GitHub</span>
+                <span class="skill"><i class="devicon-linux-plain"></i> Linux basics</span>
+              </div>
+
+              <div class="skills-slide" aria-hidden="true">
+                <span class="skill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                <span class="skill"><i class="devicon-react-original"></i> React</span>
+                <span class="skill"><i class="devicon-nodejs-plain"></i> Node.js</span>
+                <span class="skill"><i class="devicon-express-original"></i> Express.js</span>
+                <span class="skill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                <span class="skill">EJS</span>
+                <span class="skill"><i class="devicon-html5-plain"></i> HTML</span>
+                <span class="skill"><i class="devicon-css3-plain"></i> CSS</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill"><i class="devicon-git-plain"></i> Git</span>
+                <span class="skill"><i class="devicon-github-original"></i> GitHub</span>
+                <span class="skill"><i class="devicon-linux-plain"></i> Linux basics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Current Focus</h2>
+          <p>What I am working on next.</p>
+        </div>
+
+        <div class="card">
+          <ul class="focus-list">
+            <li>Building a secure SME ERP capstone project with authentication, role-based access, BI dashboard, and audit logging.</li>
+            <li>Improving React fundamentals and frontend confidence.</li>
+            <li>Strengthening backend development with Express.js and PostgreSQL.</li>
+            <li>Keeping web security as a side interest through CTFs and OWASP-style practice.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Learning Log</h2>
+          <p>I keep a progress log of my web development and cybersecurity learning.</p>
+        </div>
+
+        <div class="card">
+          <p>
+            My learning log tracks course progress, project work, TryHackMe rooms, and OverTheWire Bandit practice.
+          </p>
+          <a href="progress.md">View progress log →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>
+        Contact:
+        <a href="https://github.com/talukdaremran">GitHub</a> •
+        <a href="https://www.linkedin.com/in/emran-talukdar/">LinkedIn</a> •
+        <a href="mailto:emrant31@gmail.com">Email</a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>
