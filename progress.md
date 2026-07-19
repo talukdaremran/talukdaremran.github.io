@@ -1,25 +1,37 @@
 # Progress Log — Emran Talukdar
 
 **Overview**
-This file tracks weekly progress across:
-- **Web Dev (Angela Yu)** — course sections & project work
-- **TryHackMe (THM)** — labs / rooms completed
-- **Wargame OverTheWire Bandit** — Basic Linux command line skills & writeups
+
+This file records my learning and project progress across different stages of my development journey, including:
+
+- **Full-Stack Web Development** - Angela Yu’s Web Development Bootcamp and related projects
+- **Cybersecurity Practice** - TryHackMe rooms and modules
+- **Linux and Command-Line Practice** - OverTheWire Bandit challenges and write-ups
+- **University Capstone Project** - Secure SME ERP, my undergraduate graduation project
+
+Earlier entries are organised by week. More recent entries focus on major milestones and project progress.
 
 ---
 
-## Current snapshot
-- **Angela Yu's web dev:** Section 26- Capstone Project - create a blog web application (Completed)  
-- **TryHackMe:** Cybersecurity 101 → Web Hacking module (in progress)  
-- **OverTheWire:** Bandit Wargame → Level 17 -> 18 
+## Current Focus
+- **Primary project:** Secure SME ERP
+- **Purpose:** Final capstone project for my Bachelor of Information Technology
+- **Current status:** In progress
+- **Main technologies:** Node.js, Express.js, PostgreSQL, React, Python, and scikit-learn
+- **Current focus areas:** Authentication, role-based access control, business intelligence dashboards, audit logging, anomaly detection, sales forecasting, and customer churn prediction
+
+I completed Angela Yu’s Full-Stack Web Development Bootcamp on 7 July 2026. TryHackMe and OverTheWire Bandit are currently paused while I focus on completing the capstone project.
 
 ---
 
-## How I log
-Each week I add:
-- Date range (week)
-- Short bullets for each track: what I finished, artifacts (links/screenshots), and next goal
-- A one-line time summary (approx hours)
+## How I Log Progress
+For each progress period, I record:
+
+- The date range
+- Work completed in each learning track
+- Relevant projects, write-ups, or other artifacts
+- The next planned goal
+- Approximate time spent
 
 ---
 
@@ -152,6 +164,7 @@ Each week I add:
 
 - **Time spent:** ~7 hours
 
-### Date: 7 July 2026
+### Milestone: 7 July 2026
 - Finished **Full-stack Web Development** Bootcamp by Angela Yu
-- Started working on **Capstone Project** (Final project of my undergraduate degree)
+- Began working on **Secure SME ERP**, the final capstone project of my undergraduate degree
+- Shifted my primary focus from guided coursework to planning and developing a larger full-stack application
